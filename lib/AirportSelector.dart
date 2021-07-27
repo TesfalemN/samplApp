@@ -285,7 +285,7 @@ class AirportSelector {
                                 2,
                               ),
                               decoration: BoxDecoration(
-                                color: Colors.grey.shade50,
+                                color: Colors.grey.shade100,
                                 borderRadius: BorderRadius.all(
                                   Radius.circular(2),
                                 ),
