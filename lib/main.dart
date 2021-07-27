@@ -29,7 +29,7 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   final duplicateItems =
       List<ListItem>.generate(100, (i) => ListItem("Airport $i"));
   List<ListItem> list = <ListItem>[];
@@ -45,13 +45,8 @@ class _MyHomePageState extends State<MyHomePage> {
     populateData();
   }
 
-  @override
-  void dispose() {
-    controller!.dispose();
-    super.dispose();
-  }
-
   AirportController airportController = Get.put(AirportController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
